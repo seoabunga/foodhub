@@ -1,0 +1,18 @@
+This is a web project with files organized in the following way. 
+
+The top level contains these files:
+* index.html
+* review.html
+* tonz.html
+* young.html
+* readme.md
+
+It has the following subfolders:
+
+* images
+* scripts
+* style
+
+Tips for file naming: 
+* user lowercase with no spaces
+* use dasehes (not underscore) for word separation
