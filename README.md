@@ -1,4 +1,4 @@
-This is a web project with files organized in the following way. 
+This is a web project with files organized in the following way.
 
 The top level contains these files:
 * index.html
@@ -13,6 +13,6 @@ It has the following subfolders:
 * scripts
 * style
 
-Tips for file naming: 
+Tips for file naming:
 * user lowercase with no spaces
-* use dasehes (not underscore) for word separation
+* use dashes (not underscore) for word separation
