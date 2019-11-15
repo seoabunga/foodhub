@@ -24,13 +24,6 @@ a {
                          "left foot"; */
 }
 
-.header-container {
-    background-image: url('./image/login-page-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-}
-
 .nav-bar-container {
     background-color: #FFF;
     display: flex;
@@ -57,12 +50,12 @@ a {
 }
 
 .login-button {
-    display: inline-block;
-    padding: 1em;
+  display: inline-block;
+  padding: 1em;
 }
 
 .left-pane-container {
-  background-image: url('./image/login-page-bg.jpg');
+  background-image: url('./../../image/login-page-bg.jpg');
   text-align: center;
   padding: 4em;
 }

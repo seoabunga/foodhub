@@ -20,7 +20,7 @@ a {
 }
 
 .header-container {
-  background-image: url('./image/landing-page-bg.jpg');
+  background-image: url('./../../image/landing-page-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
