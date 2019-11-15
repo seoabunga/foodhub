@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Tony's Demo</title>
+    <link rel="stylesheet" href="./login_page.css">
+
+    <!-- Include firebase related things -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCgavOD_P725VItz_3gnko2dP9Gk6MEZf0",
+            authDomain: "scottdemo-c1152.firebaseapp.com",
+            databaseURL: "https://scottdemo-c1152.firebaseio.com",
+            projectId: "scottdemo-c1152",
+            storageBucket: "scottdemo-c1152.appspot.com",
+            messagingSenderId: "324543025519",
+            appId: "1:324543025519:web:cd9f8c10415e5481bd189a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+
+<body>
+  <nav class="nav-bar-container">
+    <img class="menu-button" src="./image/menu.png" alt="">
+    <div class="title-logo-container">
+      <img src="" alt="">
+      <h3 class="header-title">FoodHub</h3>
+    </div>
+    <span class="login-button">login</span>
+  </nav>
+
+  <div class="main-container">
+    <div class="left-pane-container">
+      <h1 class="left-pane-header">test</h1>
+      <p class="left-pane-paragraph">test</p>
+    </div>
+    <div class="right-pane-container">
+      <div id="firebaseui-auth-container" class="login-widget"></div>
+      <div id="loader">Loading...</div>
+    </div>
+    <footer>
+      <p>Join our team.</p>
+    </footer>
+
+  </div>
+
+
+  <script>
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+      var uiConfig = {
+          callbacks: {
+              signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                  // User successfully signed in.
+                  // Return type determines whether we continue the redirect automatically
+                  // or whether we leave that to developer to handle.
+                  return true;
+              },
+              uiShown: function () {
+                  // The widget is rendered.
+                  // Hide the loader.
+                  document.getElementById('loader').style.display = 'none';
+              }
+          },
+          // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+          signInFlow: 'popup',
+          signInSuccessUrl: 'main.html',
+          signInOptions: [
+              // Leave the lines as is for the providers you want to offer your users.
+              // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+              // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+              // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+              // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+              firebase.auth.EmailAuthProvider.PROVIDER_ID
+              // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+          ],
+          // Terms of service url.
+          tosUrl: 'main.html',
+          // Privacy policy url.
+          privacyPolicyUrl: 'main.html'
+      };
+
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+</body>
+
+</html>

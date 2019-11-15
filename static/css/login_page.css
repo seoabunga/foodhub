@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Turret+Road:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Turret Road, cursive;
+}
+
+body {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.main-container {
+    margin: 0 auto;
+    /* grid-template-columns: "25vw 25vw 25vw 25vw";
+    grid-template-rows: "25vh 25vh 25vh 25vh";
+    grid-template-areas: "left right"
+                         "left right"
+                         "left foot"; */
+}
+
+.header-container {
+    background-image: url('./image/login-page-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.nav-bar-container {
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em .5em;
+}
+
+.menu-button {
+    display: inline-block;
+    /* position: absolute; */
+    width: 40px;
+    height: 40px;
+}
+
+.title-logo-container {
+    display: inline-block;
+}
+
+.header-title {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 2.4em;
+    vertical-align: top;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 1em;
+}
+
+.left-pane-container {
+  background-image: url('./image/login-page-bg.jpg');
+  text-align: center;
+  padding: 4em;
+}
+
+.left-pane-header {
+  margin: 0 auto;
+}
+
+.left-pane-paragraph {
+  margin: 0 auto;
+}
+
+.right-pane-container {
+  margin-top: 2em;
+}
+
+
+/* .left-pane-container {
+  grid-area: left;
+}
+
+.right-pane-container {
+  grid-area: right;
+}
+
+.foot-container {
+  grid-area: foot;
+} */
+
+/* .login-widget {
+    position: absolute;
+    top: 20%;
+    left: 37%;
+} */
