@@ -1,0 +1,50 @@
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-bar-container {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: .5em .5em;
+}
+
+.menu-button {
+  display: inline-block;
+  /* position: absolute; */
+  width: 40px;
+  height: 40px;
+}
+
+.title-logo-container {
+  display: inline-block;
+}
+
+.header-title {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 2.4em;
+  vertical-align: top;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 1em;
+}
+
+/* mobile design only */
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+
+}
+
+/* tablet design only */
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+
+}
+
+/* desktop design only */
+@media only screen and (min-width: 1201px) {
+
+}
