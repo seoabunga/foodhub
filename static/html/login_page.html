@@ -5,9 +5,6 @@
     <link rel="stylesheet" href="./../css/login_page.css">
     <link rel="stylesheet" href="./../css/common-nav-style.css">
 
-
-    <!-- Include firebase related things -->
-
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
 
@@ -17,21 +14,8 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCgavOD_P725VItz_3gnko2dP9Gk6MEZf0",
-            authDomain: "scottdemo-c1152.firebaseapp.com",
-            databaseURL: "https://scottdemo-c1152.firebaseio.com",
-            projectId: "scottdemo-c1152",
-            storageBucket: "scottdemo-c1152.appspot.com",
-            messagingSenderId: "324543025519",
-            appId: "1:324543025519:web:cd9f8c10415e5481bd189a"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-
+    <!-- Configuration connecting webfiles to firebase -->
+    <script src = "../javascript/firebase_config_foodhub.js"></script>
 </head>
 
 <body>
@@ -56,11 +40,10 @@
       <div id="loader">Loading...</div>
     </div>
     <footer>
-      <p class="footer-text">Join our development team.</p>
+      <p class="footer-text">Join our development team</p>
     </footer>
 
   </div>
-
 
   <script>
       // Initialize the FirebaseUI Widget using Firebase.
@@ -100,6 +83,10 @@
 
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+  <script src = "../javascript/create_user.js"></script>
+  <script>
+    createUser();
   </script>
 </body>
 
