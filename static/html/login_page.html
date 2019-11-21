@@ -1,93 +1,94 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<head>
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./../css/login_page.css">
-    <link rel="stylesheet" href="./../css/common-nav-style.css">
+  <head>
+      <title>Login Page</title>
+      <link rel="stylesheet" href="./../css/login_page.css">
+      <link rel="stylesheet" href="./../css/common-nav-style.css">
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+      <!-- Add Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+      <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
-    <!-- Configuration connecting webfiles to firebase -->
-    <script src = "../javascript/firebase_config_foodhub.js"></script>
-</head>
+      <!-- Configuration connecting webfiles to firebase -->
+      <script src = "../javascript/firebase_config_foodhub.js"></script>
+  </head>
 
-<body>
-  <nav class="nav-bar-container">
-    <img class="menu-button" src="./../../image/menu.png" alt="">
-    <a href="./landing_page.html">
-      <div class="title-logo-container">
-          <img src="" alt="">
-          <h3 class="header-title">FoodHub</h3>
+  <body>
+    <nav class="nav-bar-container">
+      <img class="menu-button" src="./../../image/menu.png" alt="">
+      <a href="./landing_page.html">
+        <div class="title-logo-container">
+            <img src="" alt="">
+            <h3 class="header-title">FoodHub</h3>
+        </div>
+      </a>
+      <a href="./login_page.html"><span class="login-button">Sign In</span></a>
+    </nav>
+
+    <div class="main-container">
+      <div class="left-pane-container">
+        <!-- <h1 class="left-pane-heading">Welcome, <br/>a new Foodporn star!</h1> -->
+        <h3 class="left-pane-subheading">Sign in or create an account!</h3>
       </div>
-    </a>
-    <a href="./login_page.html"><span class="login-button">Sign In</span></a>
-  </nav>
+      <div class="right-pane-container">
+        <div id="firebaseui-auth-container" class="login-widget"></div>
+        <div id="loader">Loading...</div>
+      </div>
+      <footer>
+        <p class="footer-text">Join our development team</p>
+      </footer>
 
-  <div class="main-container">
-    <div class="left-pane-container">
-      <!-- <h1 class="left-pane-heading">Welcome, <br/>a new Foodporn star!</h1> -->
-      <h3 class="left-pane-subheading">Sign in or create an account!</h3>
     </div>
-    <div class="right-pane-container">
-      <div id="firebaseui-auth-container" class="login-widget"></div>
-      <div id="loader">Loading...</div>
-    </div>
-    <footer>
-      <p class="footer-text">Join our development team</p>
-    </footer>
 
-  </div>
+    <script>
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-  <script>
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                },
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: 'main.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+                // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: 'main.html',
+            // Privacy policy url.
+            privacyPolicyUrl: 'main.html'
+        };
 
-      var uiConfig = {
-          callbacks: {
-              signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-                  // User successfully signed in.
-                  // Return type determines whether we continue the redirect automatically
-                  // or whether we leave that to developer to handle.
-                  return true;
-              },
-              uiShown: function () {
-                  // The widget is rendered.
-                  // Hide the loader.
-                  document.getElementById('loader').style.display = 'none';
-              }
-          },
-          // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-          signInFlow: 'popup',
-          signInSuccessUrl: 'main.html',
-          signInOptions: [
-              // Leave the lines as is for the providers you want to offer your users.
-              // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-              // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-              // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-              // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-              firebase.auth.EmailAuthProvider.PROVIDER_ID
-              // firebase.auth.PhoneAuthProvider.PROVIDER_ID
-          ],
-          // Terms of service url.
-          tosUrl: 'main.html',
-          // Privacy policy url.
-          privacyPolicyUrl: 'main.html'
-      };
-
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
-  </script>
-  <script src = "../javascript/create_user.js"></script>
-  <script>
-    // createUser(); need to create main.html asap for next sprint.
-  </script>
-</body>
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+    <script src = "../javascript/create_user.js"></script>
+    <script>
+      // createUser(); need to create main.html asap for next sprint.
+    </script>
+  </body>
 
 </html>
