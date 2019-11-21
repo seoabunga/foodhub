@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang = en-us">
   <head>
-    <meta charset="utf-8">
+    <meta charset = "UTF-8"/>
     <title>Main Page</title>
     <link rel="stylesheet" href="./../css/landing_page.css">
     <link rel="stylesheet" href="./../css/common-nav-style.css">
@@ -17,8 +17,9 @@
 
     <!-- Configuration connecting webfiles to firebase -->
     <script src = "../javascript/firebase_config_foodhub.js"></script>
-    
+
   </head>
+
   <body>
     <div class="main-container">
       <header class="header-container">
@@ -30,9 +31,16 @@
                 <h3 class="header-title">FoodHub</h3>
             </div>
           </a>
-          <a href="./login_page.html"><span class="login-button">Sign In</span></a>
+          <a href="/landing_page.html"><span class="login-button">Sign Out</span></a>
         </nav>
       </header>
     </div>
+
+    <script src = "./../javascript/app.js"></script>
+    <script src = "./../javascript/create_user.js"></script>
+    <script>
+      createUser();
+    </script>
+
   </body>
 </html>
