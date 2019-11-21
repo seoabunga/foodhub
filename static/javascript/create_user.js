@@ -17,3 +17,5 @@ function createUser() {
       }, { merge: true });
   });
 }
+
+createUser();
