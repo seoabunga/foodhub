@@ -67,6 +67,17 @@ label5.click(function() {
     ramen5.attr("src", "./../../image/ramen-empty.png")
   }
 });
+
+function showUserName(n){
+  firebase.auth().onAuthStateChanged(function (user){
+    db.collection("users").doc(user.uid).onSnapshot(function(d) {
+      console.log("Current Name: ", d.data());
+      var x = d.data().name;
+      console.log(x);
+      document.getElementById("test").innerHTML = x;
+    });
+  })
+}
 // var showStar = false;
 // for (var i = 1; i < 6; i++) {
 //   $(".star-label-" + i).click(function() {
