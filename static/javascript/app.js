@@ -78,6 +78,8 @@ function showUserName(n){
     });
   })
 }
+
+showUserName();
 // var showStar = false;
 // for (var i = 1; i < 6; i++) {
 //   $(".star-label-" + i).click(function() {
