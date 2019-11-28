@@ -10,6 +10,7 @@
   background-image: url('./../../image/review-section-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 5em;
 }
 
 .review-section {
