@@ -13,7 +13,7 @@ body {
     background-size: cover;
 }
 
-.main-content-container {
+.review-section-container {
   /* font-size: 1.3em; */
   font-weight: bold;
   background-color: #FFF;
@@ -25,15 +25,15 @@ body {
   border-radius: 15px;
 }
 
-.main-content-container h3, h4 {
+.review-section-container h3, h4 {
   /* font-size: ; */
 }
 
-.main-content-container h3 {
+.review-section-container h3 {
   margin-top: 0;
 }
 
-.main-content-container h4 {
+.review-section-container h4 {
   margin-bottom: 0;
 }
 
@@ -78,25 +78,4 @@ textarea, input[type=text] {
   width: 100%;
   font-size: 1.2em;
   margin-bottom: 1.2em;
-}
-
-@media only screen and (max-width: 767px) {
-  .main-content-container {
-    width: 80%;
-    padding: 1em;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .main-content-container {
-    width: 70%;
-    padding: 3em;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .main-content-container {
-    width: 55%;
-    padding: 3em;
-  }
 }

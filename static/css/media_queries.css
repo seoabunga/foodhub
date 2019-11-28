@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Turret+Road:400,700&display=swap');
+
+
+@media only screen and (max-width: 767px) {
+.review-section-container {
+    width: 80%;
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+.review-section-container {
+    width: 70%;
+    padding: 3em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+.review-section-container {
+    width: 55%;
+    padding: 3em;
+  }
+}
