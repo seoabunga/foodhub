@@ -33,6 +33,32 @@ a {
   color: white;
 }
 
+.about-us-container {
+  width: 80%;
+  margin: 3em auto;
+  padding: 1em;
+
+  text-align: center;
+}
+
+.about-us-container p {
+  text-align: justify;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background-color: #000;
+  margin: 4em auto;
+}
+
+.footer-text {
+  margin: 0 auto;
+  color: #FFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* mobile design only */
 @media only screen and (min-width: 400px) and (max-width: 800px) {
 
