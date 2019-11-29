@@ -3,7 +3,7 @@
   <head>
     <meta charset = "UTF-8"/>
     <title>Main Page</title>
-    <link rel="stylesheet" href="./../css/landing_page.css">
+    <link rel="stylesheet" href="./../css/main.css">
     <link rel="stylesheet" href="./../css/common-nav-style.css">
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -31,8 +31,9 @@
                 <h3 class="header-title">FoodHub</h3>
             </div>
           </a>
-          <a href="./landing_page.html"><span class="login-button">Sign Out</span></a>
+          <a href="#" onclick = "logoutUser()"><span class="login-button">Sign Out</span></a>
         </nav>
+        <div id = "restaurant-info-container"></div>
       </header>
       <div id = "test"></div>
     </div>
@@ -40,7 +41,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src = "./../javascript/create_user.js"></script>
     <script src = "./../javascript/app.js"></script>
-    
+    <script src = "./../javascript/get_restaurant.js"></script>
+
     <!-- <script>
       createUser();
       showUserName();

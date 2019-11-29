@@ -68,6 +68,23 @@ label5.click(function() {
   }
 });
 
+// ---------------------------------------------
+// If the currently logged in user is authenticated,
+// then log this user out of the system.
+// ---------------------------------------------
+function logoutUser() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    var promise = firebase.auth().signOut();
+    promise.then(function () {
+      // Sign-out successful.
+      //alert("User has been signed out.");
+      location.href = "./index.html";
+    }).catch(function(error){
+      // An error happened.
+    });
+  });
+}
+
 function showUserName(n){
   firebase.auth().onAuthStateChanged(function (user){
     db.collection("users").doc(user.uid).onSnapshot(function(d) {
@@ -79,7 +96,18 @@ function showUserName(n){
   })
 }
 
+function welcome() {
+  firebase.auth().onAuthStateChanged(function(user){
+    db.collection("restaurants").doc("restaurant1").get().then(
+      function(doc){
+        document.getElementById("restaurant-info-container").innerHTML = doc.data().name;
+      }
+    )
+  })
+}
+
 showUserName();
+
 // var showStar = false;
 // for (var i = 1; i < 6; i++) {
 //   $(".star-label-" + i).click(function() {
