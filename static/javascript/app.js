@@ -408,7 +408,7 @@ function logoutUser() {
   });
 }
 
-function showUserName(n){
+/* function showUserName(n){
   firebase.auth().onAuthStateChanged(function (user){
     db.collection("users").doc(user.uid).onSnapshot(function(d) {
       console.log("Current Name: ", d.data());
@@ -417,19 +417,20 @@ function showUserName(n){
       document.getElementById("test").innerHTML = x;
     });
   })
-}
+} */
 
 function welcome() {
   firebase.auth().onAuthStateChanged(function(user){
-    db.collection("restaurants").doc("restaurant1").get().then(
+    db.collection("users").doc(user.uid).get().then(
       function(doc){
-        document.getElementById("restaurant-info-container").innerHTML = doc.data().name;
+        document.getElementById("welcome-message").innerHTML = doc.data().name;
       }
     )
   })
 }
 
-showUserName();
+welcome();
+// showUserName();
 
 // var showStar = false;
 // for (var i = 1; i < 6; i++) {

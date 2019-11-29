@@ -26,6 +26,13 @@ a {
   height: 600px;
 }
 
+#welcome-container {
+  vertical-align: middle;
+  text-align: center;
+  line-height: 533px;
+  color: white;
+}
+
 /* mobile design only */
 @media only screen and (min-width: 400px) and (max-width: 800px) {
 
