@@ -5,6 +5,8 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="./../css/main.css">
     <link rel="stylesheet" href="./../css/common-nav-style.css">
+    <link rel="stylesheet" href="./../css/review-section.css">
+    <link rel="stylesheet" href="./../css/media_queries.css">
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
@@ -38,10 +40,107 @@
       <div id = "test"></div>
     </div>
 
+    <div class="review-section-container">
+      <div class="review-section">
+        <div class="restaurant-info-container">
+
+          <h3 class="restaurant-name">Brian's Pasta & Olive</h3>
+          <span>3132 200 Street, Langley BC</span><br/>
+          <span>(778) 888-7777</span>
+
+          <h4>Operation Hours</h4>
+          <span>Mon-Fri 10:00 A.M. - 10:00 P.M.</span><br/>
+          <span>Sat 10:00 A.M. - 12:00 P.M.</span><br/>
+          <span>Sun 11:00 A.M. - 9:00 P.M.</span>
+        </div>
+
+        <form class="review-form" action="index.html" method="post">
+          <legend>Price Rating System</legend>
+          <fieldset class="noodle-field">
+            <ul>
+              <li>
+                <input id="ramen-input-1" type="radio" name="" value="">
+                <label class="ramen-label-1" for="ramen-input-1">
+                  <img id="ramen-img" class="ramen-1" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-2" type="radio" name="" value="">
+                <label class="ramen-label-2" for="ramen-input-2">
+                  <img id="ramen-img" class="ramen-2" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-3" type="radio" name="" value="">
+                <label class="ramen-label-3" for="ramen-input-3">
+                  <img id="ramen-img" class="ramen-3" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-4" type="radio" name="" value="">
+                <label class="ramen-label-4" for="ramen-input-4">
+                  <img id="ramen-img" class="ramen-4" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-5" type="radio" name="" value="">
+                <label class="ramen-label-5" for="ramen-input-5">
+                  <img id="ramen-img" class="ramen-5" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <legend>Quality Rating System</legend>
+          <fieldset class="steak-field">
+            <ul>
+              <li>
+                <input id="steak-input-1" type="radio" name="" value="">
+                <label class="steak-label-1" for="steak-input-1">
+                  <img id="steak-img" class="steak-1" src="./../../image/steak-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="steak-input-2" type="radio" name="" value="">
+                <label class="steak-label-2" for="steak-input-2">
+                  <img id="steak-img" class="steak-2" src="./../../image/steak-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="steak-input-3" type="radio" name="" value="">
+                <label class="steak-label-3" for="steak-input-3">
+                  <img id="steak-img" class="steak-3" src="./../../image/steak-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="steak-input-4" type="radio" name="" value="">
+                <label class="steak-label-4" for="steak-input-4">
+                  <img id="steak-img" class="steak-4" src="./../../image/steak-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="steak-input-5" type="radio" name="" value="">
+                <label class="steak-label-5" for="steak-input-5">
+                  <img id="steak-img" class="steak-5" src="./../../image/steak-empty.png" alt="">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <input type="text" name="subject" placeholder="Enter a title here.">
+          <textarea name="reviews" placeholder="Please share what you think about the restaurant!" rows="8" cols="80"></textarea>
+        </form>
+      </div>
+
+      </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src = "./../javascript/create_user.js"></script>
     <script src = "./../javascript/app.js"></script>
+<<<<<<< HEAD
     <script src = "./../javascript/get_restaurant.js"></script>
+=======
+>>>>>>> c309972781d8e34ab2edc7657b95d7181672b853
 
     <!-- <script>
       createUser();

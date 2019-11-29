@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Turret+Road:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Turret Road, cursive;
+}
+.review-section-container {
+  margin: 0 auto;
+  text-align: center;
+  background-image: url('./../../image/review-section-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5em;
+}
+
+.review-section {
+
+  /* font-size: 1.3em; */
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* width: 70%; */
+  /* margin: 0 auto; */
+  margin: 5em auto;
+  padding: 3em;
+  border: 5px solid royalblue;
+  border-radius: 15px;
+}
+
+.review-section-container h3, h4 {
+  /* font-size: ; */
+}
+
+.review-section-container h3 {
+  margin-top: 0;
+}
+
+.review-section-container h4 {
+  margin-bottom: 0;
+}
+
+.review-form {
+  margin-top: 2em;
+}
+
+fieldset {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
+
+.noodle-field {
+  margin-bottom: 1em;
+}
+
+.steak-field {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+#ramen-img, #steak-img {
+  width: 30px;
+  height: 30px;
+}
+
+textarea, input[type=text] {
+  width: 100%;
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
