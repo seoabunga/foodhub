@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Restaurant Review Page</title>
+  <title>Restaurant List Page</title>
   <link rel="stylesheet" href="./../css/restaurant_list.css">
   <link rel="stylesheet" href="./../css/review-section.css">
   <link rel="stylesheet" href="./../css/common-nav-style.css">
@@ -42,26 +42,64 @@
   </nav>
 
   <div class="restaurants-container">
-    <div id="comments-container">
       <header>
-        <h2>Comments</h2>
-        <div id="review" class="review-card">
-          <div class="comment-title"><h3>asdihalksdhlsak</h3></div>
-          <p class = "comment-text">"Vancouver is a beautiful place, and I really want to
-            recommend all my families and friends to go to Vancouver! This is coal harbour, and I saw a dolphin statue. It was
-            well made. I will come back to Vancouver again for sure! Hope everyone comes to Vancouver and enjoy its sunlight
-            and beautiful views!"</p>
-          <div class = "comment-name">
-            <div class = "user-comment-info">
-              <img src="./image/user1.jpg" style="width: 50px; height: 50px; border-radius: 50%;" />
-              <span style="display: inline-block; vertical-align: top; padding-top: 1em; padding-left: 1em; font-weight: bold; font-size: 1.2em;">Justin
-                Iverhoson</span>
-            </div>
-            <span style="display: inline-block; padding-top: 1em; color: rgb(199, 204, 209);">yesterday</span>
-          </div>
+      <h2>Restaurants</h2>
+      <!-- Restaurant 1 -->
+      <div class="restaurant-card">
+        <div class="restaurant-title">
+          <h3 id = "restaurant-name"></h3>
+          <h3 id = "restaurant-address"></h3>
+          <h3 id = "restaurant-phone-number"></h3>
+          <h4 id = "restaurant-motto"></h4>
+          <img src = "./../../image/togo-sushi.jpg" alt = "togo sushi" id = "togo_sushi" />
         </div>
-      </header>
-    </div>
+
+        <!-- <div class = "restaurant-misc">
+          <div class = "user-comment-info">
+            <img src="./image/user1.jpg" class = "user-profile"/>
+            <span id = "user-id">Justin Iverhoson</span>
+          </div>
+          <span class = "comment-date">yesterday</span>
+        </div> -->
+      </div>
+
+      <!-- Restaurant 2 -->
+      <div class="restaurant-card">
+        <div class="restaurant-title">
+          <h3 id = "restaurant-name"></h3>
+        </div>
+        <p class = "restaurant-text">"Vancouver is a beautiful place, and I really want to
+          recommend all my families and friends to go to Vancouver! This is coal harbour, and I saw a dolphin statue. It was
+          well made. I will come back to Vancouver again for sure! Hope everyone comes to Vancouver and enjoy its sunlight
+          and beautiful views!"</p>
+        <!-- <div class = "restaurant-misc">
+          <div class = "user-comment-info">
+            <img src="./image/user1.jpg" class = "user-profile"/>
+            <span id = "user-id">Justin Iverhoson</span>
+          </div>
+          <span class = "comment-date">yesterday</span>
+        </div> -->
+      </div>
+
+      <!-- Restaurant 3 -->
+      <div class="restaurant-card">
+        <div class="restaurant-title">
+          <h3 id = "restaurant-name"></h3>
+        </div>
+        <p class = "restaurant-text">"Vancouver is a beautiful place, and I really want to
+          recommend all my families and friends to go to Vancouver! This is coal harbour, and I saw a dolphin statue. It was
+          well made. I will come back to Vancouver again for sure! Hope everyone comes to Vancouver and enjoy its sunlight
+          and beautiful views!"</p>
+        <!-- <div class = "restaurant-misc">
+          <div class = "user-comment-info">
+            <img src="./image/user1.jpg" class = "user-profile"/>
+            <span id = "user-id">Justin Iverhoson</span>
+          </div>
+          <span class = "comment-date">yesterday</span>
+        </div> -->
+      </div>
+
+    </header>
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
