@@ -27,6 +27,7 @@ body {
     border-radius: 12px;
     box-shadow: rgb(0, 0, 0) 0px 0px 15px;
     padding: 1em;
+    overflow: auto;
 }
 
 .restaurant-text {
@@ -36,7 +37,43 @@ body {
 }
 
 #togo_sushi {
+    margin: 0px 3px 0px 3px;
+    width: 25%;
+    height: 25%;
+    float: right;
+    clear: both;
+}
 
+#daeji {
+  margin: 0px 3px 2px 3px;
+  width: 25%;
+  height: 25%;
+  float: right;
+  clear: both;
+}
+
+#jimoco {
+  margin: 0px 3px 2px 0px;
+  width: 25%;
+  height: 25%;
+  float: right;
+  clear: both;
+}
+
+#bb {
+  margin: 0px 3px 2px 0px;
+  width: 25%;
+  height: 5%;
+  float: right;
+  clear: both;
+}
+
+#kimbabcheonguk {
+  margin: 0px 3px 2px 0px;
+  width: 25%;
+  height: 5%;
+  float: right;
+  clear: both;
 }
 
 /* .restaurant-misc {
