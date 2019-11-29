@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Turret+Road:400,700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: Turret Road, cursive;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.restaurants-container {
+  margin: 0 auto;
+  /* text-align: center; */
+  background-image: url('./../../image/review-section-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5em;;
+}
+
+.review-card {
+    style= width: 60%;
+    margin: 0px auto 4em;
+    border: 2px solid rgb(197, 201, 209);
+    border-radius: 12px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 15px;
+    padding: 1em;
+}
+
+.comment-text {
+    margin: 1.5em 0px;
+    font-weight: bold;
+    width: 85%;"
+}
+
+.comment-name {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.user-comment-info {
+    display: inline-block;
+}
