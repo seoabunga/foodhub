@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Turret+Road:400,700&display=swap');
 
-* {
-    box-sizing: border-box;
-    font-family: Turret Road, cursive;
-}
 .review-section-container {
   margin: 0 auto;
   text-align: center;
@@ -24,10 +19,6 @@
   padding: 3em;
   border: 5px solid royalblue;
   border-radius: 15px;
-}
-
-.review-section-container h3, h4 {
-  /* font-size: ; */
 }
 
 .review-section-container h3 {
@@ -62,7 +53,7 @@ ul {
   padding: 0;
 }
 
-li {
+.review-section-container li {
   display: inline-block;
 }
 
