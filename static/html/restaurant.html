@@ -4,11 +4,18 @@
   <meta charset = "utf-8" />
   <title>Restaurant Page</title>
   <link rel="stylesheet" href="./../css/common-nav-style.css">
-  <link rel="stylesheet" href="./../css/restaurant-review-page.css">
+  <!-- <link rel="stylesheet" href="./../css/restaurant-review-page.css"> -->
+  <link rel="stylesheet" href="./../css/menu_button_nav.css">
+
 </head>
 <body>
+  <ul id="menu-btn-menulist">
+    <li><img class="close" src="./../../image/close-white.png"/></li>
+    <li>Home</li>
+    <li>Restaurant</li>
+  </ul>
   <nav class="nav-bar-container">
-    <img class="menu-button" src="./../../image/menu.png" alt="">
+    <img id="menuBTN" class="menu-button" src="./../../image/menu.png" alt="">
     <a href="./landing_page.html">
       <div class="title-logo-container">
           <img src="" alt="">
@@ -19,6 +26,9 @@
   </nav>
 
   <div class="restaurant-info-container"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src = "./../javascript/app.js"></script>
 
 </body>
 </html>

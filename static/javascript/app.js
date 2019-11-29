@@ -443,3 +443,27 @@ showUserName();
 //     }
 //   });
 // }
+
+
+// Menu button nav function
+var slideIn = {
+  "left": "0px",
+  "easing": "swing"
+};
+var slideOut = {
+  "left": "-200px",
+  "easing": "swing"
+};
+
+var menuBTN = $("#menuBTN");
+var menuList = $("#menu-btn-menulist");
+
+menuBTN.click(function() {
+
+  menuList.animate(slideIn, 500);
+});
+
+var close = $(".close");
+close.click(function() {
+  menuList.animate(slideOut, 500);
+});

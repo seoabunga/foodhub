@@ -1,0 +1,43 @@
+#menu-btn-menulist {
+  /* height: 100%; */
+  position: absolute;
+  left: -200px;
+  /* top: 115px; */
+  padding: 2em;
+  border-top-right-radius: 15px;
+  background-color: #0A233E;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+  z-index: 2;
+  opacity: .8;
+}
+
+#menuBTN:hover {
+  cursor: pointer;
+}
+
+#menu-btn-menulist li{
+  display: list-item;
+  margin: 1.3em 0;
+}
+
+.close {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}

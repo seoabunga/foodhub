@@ -5,6 +5,8 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="./../css/main.css">
     <link rel="stylesheet" href="./../css/common-nav-style.css">
+    <link rel="stylesheet" href="./../css/menu_button_nav.css">
+
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
@@ -20,10 +22,15 @@
 
   </head>
   <body>
+    <ul id="menu-btn-menulist">
+      <li><img class="close" src="./../../image/close-white.png"/></li>
+      <li>Home</li>
+      <li>Restaurant</li>
+    </ul>
     <div class="main-container">
       <header class="header-container">
         <nav class="nav-bar-container">
-          <img class="menu-button" src="./../../image/menu.png" alt="">
+          <img id="menuBTN" class="menu-button" src="./../../image/menu.png" alt="">
           <a href="./landing_page.html">
             <div class="title-logo-container">
                 <img src="." alt="">
@@ -34,5 +41,9 @@
         </nav>
       </header>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src = "./../javascript/app.js"></script>
+    
   </body>
 </html>
