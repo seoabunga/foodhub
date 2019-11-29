@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./../css/common-nav-style.css">
     <link rel="stylesheet" href="./../css/media_queries.css">
     <link rel="stylesheet" href="./../css/menu_button_nav.css">
+    <link rel="stylesheet" href="./../css/roulette.css">
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
@@ -45,7 +46,43 @@
       <div id = "test"></div>
     </div>
 
-    
+    <div class="roulette-container">
+      <div class="title">
+        <div class="padding">
+          <h1>What Should We Eat?</h1>
+        </div>
+      </div>
+
+      <div class="response">
+        <div class="padding">
+          <h2>Fastfood:</h2>
+          <h2 id="fastfood"></h2>
+        </div>
+      </div>
+
+      <div class="quality">
+        <div class="padding">
+          <h2>Restaurant:</h2>
+          <h2 id="restaurant"></h2>
+        </div>
+      </div>
+
+      <div class="dessert">
+        <div class="padding">
+          <h2>Dessert:</h2>
+          <h2 id="dessert"></h2>
+        </div>
+      </div>
+
+      <div class="re-roll" onclick="reRoll()">
+        <div class="padding">
+          <h2>Roll</h2>
+        </div>
+      </div>
+    </div>
+
+
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src = "./../javascript/app.js"></script>
