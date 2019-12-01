@@ -11,4 +11,18 @@ function createRestaurant1() {
   })
 }
 
+function getMenu() {
+  firebase.auth().onAuthStateChanged(function(user){
+    db.collection("restaurants").doc("restaurant1")
+    .collection("menu").doc("menuItem1")
+    .get().then(
+      function(doc){
+        document.getElementById("menu1-name").innerHTML = doc.data().Name;
+        document.getElementById("menu1-price").innerHTML = doc.data().Price;
+      }
+    )
+  })
+}
+
 createRestaurant1();
+getMenu();
