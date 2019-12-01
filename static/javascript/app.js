@@ -429,6 +429,27 @@ function welcome() {
   })
 }
 
+function authentication() {
+  firebase.auth().onAuthStateChanged(function(user){
+    if (user){
+      console.log("Signed in");
+      document.getElementById("login-button").innerHTML = "Sign Out"
+      $('#login-button').click(function(){
+        console.log("redirect to index");
+        logoutUser();
+      });
+    } else {
+      console.log("Signed out");
+      document.getElementById("login-button").innerHTML = "Sign In";
+      $('#login-button').click(function(){
+        console.log("redirect to login page");
+        location.href = './login_page.html';
+      });
+    }
+  })
+}
+
+authentication();
 welcome();
 // showUserName();
 
