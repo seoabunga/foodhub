@@ -11,7 +11,7 @@ function createRestaurant1() {
   })
 }
 
-function getMenu() {
+function getMenu1() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1")
     .collection("menu").doc("menuItem1")
@@ -24,5 +24,61 @@ function getMenu() {
   })
 }
 
+function getMenu2() {
+  firebase.auth().onAuthStateChanged(function(user){
+    db.collection("restaurants").doc("restaurant1")
+    .collection("menu").doc("menuItem2")
+    .get().then(
+      function(doc){
+        document.getElementById("menu2-name").innerHTML = doc.data().Name;
+        document.getElementById("menu2-price").innerHTML = doc.data().Price;
+      }
+    )
+  })
+}
+
+function getMenu3() {
+  firebase.auth().onAuthStateChanged(function(user){
+    db.collection("restaurants").doc("restaurant1")
+    .collection("menu").doc("menuItem3")
+    .get().then(
+      function(doc){
+        document.getElementById("menu3-name").innerHTML = doc.data().Name;
+        document.getElementById("menu3-price").innerHTML = doc.data().Price;
+      }
+    )
+  })
+}
+
+function getMenu4() {
+  firebase.auth().onAuthStateChanged(function(user){
+    db.collection("restaurants").doc("restaurant1")
+    .collection("menu").doc("menuItem4")
+    .get().then(
+      function(doc){
+        document.getElementById("menu4-name").innerHTML = doc.data().Name;
+        document.getElementById("menu4-price").innerHTML = doc.data().Price;
+      }
+    )
+  })
+}
+
+function getMenu5() {
+  firebase.auth().onAuthStateChanged(function(user){
+    db.collection("restaurants").doc("restaurant1")
+    .collection("menu").doc("menuItem5")
+    .get().then(
+      function(doc){
+        document.getElementById("menu5-name").innerHTML = doc.data().Name;
+        document.getElementById("menu5-price").innerHTML = doc.data().Price;
+      }
+    )
+  })
+}
+
 createRestaurant1();
-getMenu();
+getMenu1();
+getMenu2();
+getMenu3();
+getMenu4();
+getMenu5();

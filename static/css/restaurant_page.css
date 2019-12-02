@@ -13,7 +13,10 @@ body {
 .restaurant-menu-container {
   margin: 0 auto;
   /* text-align: center; */
-  background-image: url('./../../image/review-section-bg.jpg');
+  /* background-image: url('./../../image/review-section-bg.jpg'); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5em;
@@ -21,7 +24,12 @@ body {
 
 .menu-item {
     background-color: RGBA(255, 255, 255, 0.8);
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 0 1 24%;
+    height: 70%;
+    width: 40%;
     margin: 0px auto 4em;
     border: 2px solid rgb(197, 201, 209);
     border-radius: 12px;
@@ -30,10 +38,51 @@ body {
     overflow: auto;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 #menuItem1 {
-    margin: 0px 3px 0px 3px;
-    width: 25%;
-    height: 25%;
-    float: right;
+    margin: 3px 1.5px 3px 1.5px;
+    width: 50%;
+    height: 50%;
+    clear: both;
+}
+
+#menuItem2 {
+    margin: 3px 1.5px 3px 1.5px;
+    width: 50%;
+    height: 50%;
+    clear: both;
+}
+
+#menuItem3 {
+    margin: 3px 1.5px 3px 1.5px;
+    width: 50%;
+    height: 50%;
+    clear: both;
+}
+
+#menuItem4 {
+    margin: 3px 1.5px 3px 1.5px;
+    width: 50%;
+    height: 50%;
+    clear: both;
+}
+
+#menuItem5 {
+    margin: 3px 1.5px 3px 1.5px;
+    width: 50%;
+    height: 50%;
+    clear: both;
+}
+
+#menuItem1 {
+    margin: 3px 1.5px 3px 1.5px;
+    width: 50%;
+    height: 50%;
     clear: both;
 }
