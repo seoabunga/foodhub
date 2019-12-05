@@ -3,10 +3,10 @@ function getRestaurant1() {
     db.collection("restaurants").doc("restaurant1").get().then(
       function(doc){
         // console.log(doc.data().motto);
-        document.getElementById("restaurant1-name").innerHTML = doc.data().name;
-        document.getElementById("restaurant1-address").innerHTML = doc.data().location;
-        document.getElementById("restaurant1-motto").innerHTML = doc.data().motto;
-        document.getElementById("restaurant1-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant1-name").innerHTML = doc.data().Name;
+        document.getElementById("restaurant1-address").innerHTML = doc.data().Location;
+        document.getElementById("restaurant1-motto").innerHTML = doc.data().Motto;
+        document.getElementById("restaurant1-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })
@@ -17,10 +17,10 @@ function getRestaurant2() {
     db.collection("restaurants").doc("restaurant2").get().then(
       function(doc){
         // console.log(doc.data().location);
-        document.getElementById("restaurant2-name").innerHTML = doc.data().name;
-        document.getElementById("restaurant2-address").innerHTML = doc.data().location;
-        document.getElementById("restaurant2-motto").innerHTML = doc.data().motto;
-        document.getElementById("restaurant2-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant2-name").innerHTML = doc.data().Name;
+        document.getElementById("restaurant2-address").innerHTML = doc.data().Location;
+        document.getElementById("restaurant2-motto").innerHTML = doc.data().Motto;
+        document.getElementById("restaurant2-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })
@@ -33,8 +33,8 @@ function getRestaurant3() {
         // console.log(doc.data().location);
         document.getElementById("restaurant3-name").innerHTML = doc.data().Name;
         document.getElementById("restaurant3-address").innerHTML = doc.data().Location;
-        document.getElementById("restaurant3-motto").innerHTML = doc.data().motto;
-        document.getElementById("restaurant3-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant3-motto").innerHTML = doc.data().Motto;
+        document.getElementById("restaurant3-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })
@@ -47,8 +47,8 @@ function getRestaurant4() {
         // console.log(doc.data().location);
         document.getElementById("restaurant4-name").innerHTML = doc.data().Name;
         document.getElementById("restaurant4-address").innerHTML = doc.data().Location;
-        document.getElementById("restaurant4-motto").innerHTML = doc.data().motto;
-        document.getElementById("restaurant4-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant4-motto").innerHTML = doc.data().Motto;
+        document.getElementById("restaurant4-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })
@@ -61,8 +61,8 @@ function getRestaurant5() {
         // console.log(doc.data().location);
         document.getElementById("restaurant5-name").innerHTML = doc.data().Name;
         document.getElementById("restaurant5-address").innerHTML = doc.data().Location;
-        document.getElementById("restaurant5-motto").innerHTML = doc.data().motto;
-        document.getElementById("restaurant5-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant5-motto").innerHTML = doc.data().Motto;
+        document.getElementById("restaurant5-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })

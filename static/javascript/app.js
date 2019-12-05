@@ -492,7 +492,46 @@ close.click(function() {
 });
 
 // Roulette FUNCTIONS
-var $fastfood = ['In N Out', 'Mitsuwa', 'The Habit', 'Chipotle', 'Lil\' Pickle', 'Buffalo Wild Wings', 'Dominos', 'Haus of Pizza', 'Baja Fish', 'Chic Fil A', 'Flame Broiler', 'Jerry\'s Dogs', 'Jersey Mike\'s', 'Panera', 'Rooster Cafe', 'Corner Bakery', 'Laventinas', 'Bagelmania', 'Tommy\'s Pastrami', 'Costco'];
+
+
+function pickSomething(total) {
+  // generate a random Num 0-100
+//0, 1, 2, 3, 4, ....
+
+  db.collection("something")
+  .where("number","==", generateNum)
+  .get().then(function(snap) {
+    console.log(snap);
+    snap.forEach(function(doc) {
+      console.log(doc.data());
+      var name = doc.data().name;
+      var name = doc.data().name;
+      console.log(name);
+      console.log(name);
+      // do stuff / display with the lucky one
+
+    })
+  })
+}
+
+function writeSomething() {
+  var count = 0;
+  var obj = {
+    location: bby,
+    ratingL 4,
+    number: count
+  }
+
+  db.collection("restaurants").add(obj);
+  count += 1;
+
+  return count;
+}
+
+var total = writeCafe();
+pickOnecafe(total);
+
+var $fastfood = ['In N Out', 'Mitsuwa', 'The Habit', 'Chipotle', 'Lil\'s Pickle', 'Buffalo Wild Wings', 'Dominos', 'Haus of Pizza', 'Baja Fish', 'Chic Fil A', 'Flame Broiler', 'Jerry\'s Dogs', 'Jersey Mike\'s', 'Panera', 'Rooster Cafe', 'Corner Bakery', 'Laventinas', 'Bagelmania', 'Tommy\'s Pastrami', 'Costco'];
 
 var $fastRandom = Math.floor($fastfood.length * Math.random());
 

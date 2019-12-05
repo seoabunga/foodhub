@@ -5,7 +5,7 @@ function createRestaurant3() {
         // console.log(doc.data().motto);
         document.getElementById("restaurant3-name").innerHTML = doc.data().Name;
         document.getElementById("restaurant3-address").innerHTML = doc.data().Location;
-        document.getElementById("restaurant3-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant3-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })
