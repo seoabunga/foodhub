@@ -3,9 +3,9 @@ function createRestaurant2() {
     db.collection("restaurants").doc("restaurant2").get().then(
       function(doc){
         // console.log(doc.data().motto);
-        document.getElementById("restaurant2-name").innerHTML = doc.data().name;
-        document.getElementById("restaurant2-address").innerHTML = doc.data().location;
-        document.getElementById("restaurant2-phone-number").innerHTML = doc.data().phoneNumber;
+        document.getElementById("restaurant2-name").innerHTML = doc.data().Name;
+        document.getElementById("restaurant2-address").innerHTML = doc.data().Location;
+        document.getElementById("restaurant2-phone-number").innerHTML = doc.data().PhoneNumber;
       }
     )
   })
