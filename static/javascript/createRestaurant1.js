@@ -75,3 +75,44 @@ function getMenu5() {
     )
   })
 }
+
+function createCommentCards() {
+    db.collection("restaurants").doc("restaurant1")
+    .collection("comments").get().then(snap=> {
+        size = snap.size;
+        // console.log(size);
+        for (var i = 1; i <= size; i++){
+            $('.comments-container').append("<div class = 'comment-card'>"
+                                            + "<h3 id = 'comment" + i + "-title'></h3>"
+                                            + "<h3 id = 'comment" + i + "'></h3>"
+                                            + "</div>");
+        }
+    });
+}
+
+function createComment() {
+  db.collection("restaurants").doc("restaurant1")
+  .collection("comments").get().then(function(querySnapshot){
+      // get comment content and put in comments cards
+      querySnapshot.forEach(function(doc){
+          console.log(doc.id, " => ", doc.data());
+          document.getElementById("comment1-title").innerHTML = doc.data().Title;
+          document.getElementById("comment1").innerHTML = doc.data().Comment;
+          document.getElementById("comment2-title").innerHTML = doc.data().Title;
+          document.getElementById("comment2").innerHTML = doc.data().Comment;
+          document.getElementById("comment3-title").innerHTML = doc.data().Title;
+          document.getElementById("comment3").innerHTML = doc.data().Comment;
+          document.getElementById("comment4-title").innerHTML = doc.data().Title;
+          document.getElementById("comment4").innerHTML = doc.data().Comment;
+          document.getElementById("comment5-title").innerHTML = doc.data().Title;
+          document.getElementById("comment5").innerHTML = doc.data().Comment;
+          document.getElementById("comment6-title").innerHTML = doc.data().Title;
+          document.getElementById("comment6").innerHTML = doc.data().Comment;
+          document.getElementById("comment7-title").innerHTML = doc.data().Title;
+          document.getElementById("comment7").innerHTML = doc.data().Comment;
+          document.getElementById("comment8-title").innerHTML = doc.data().Title;
+          document.getElementById("comment8").innerHTML = doc.data().Comment;
+      });
+
+  })
+}
