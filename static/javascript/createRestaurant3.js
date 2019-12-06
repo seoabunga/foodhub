@@ -75,10 +75,3 @@ function getMenu5() {
     )
   })
 }
-
-createRestaurant3();
-getMenu1();
-getMenu2();
-getMenu3();
-getMenu4();
-getMenu5();
