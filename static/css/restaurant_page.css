@@ -45,6 +45,23 @@ body {
   width: 100%;
 }
 
+.comment-card {
+    background-color: RGBA(255, 255, 255, 0.8);
+    width: 80%;
+    margin: 0px auto 4em;
+    border: 2px solid rgb(197, 201, 209);
+    border-radius: 12px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 15px;
+    padding: 1em;
+    overflow: auto;
+}
+
+#leave-comment {
+  position: absolute;
+  top: 150px;
+  right: 90px;
+}
+
 #menuItem1 {
     margin: 3px 1.5px 3px 1.5px;
     width: 50%;

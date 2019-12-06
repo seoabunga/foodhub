@@ -49,7 +49,7 @@
           <span>(778) 888-7777</span>
         </div>
 
-        <form class="review-form" action="index.html" method="post">
+        <form class="review-form" action="#" method="post">
           <legend>Price Rating System</legend>
           <fieldset class="noodle-field">
             <ul>
@@ -122,10 +122,10 @@
           </ul>
         </fieldset>
 
-        <input type="text" name="subject" placeholder="Enter a title here.">
+        <input type="text" name="subject" placeholder="Enter a title here." id = "title">
         <textarea name="reviews" placeholder="Please share what you think about the restaurant!" rows="8"
-          cols="80"></textarea>
-        <input type="submit" value="Submit"/>
+          cols="80" id = "comment"></textarea>
+        <p id = "submit">Submit</p>
         </form>
       </div>
 
@@ -137,6 +137,7 @@
     <script src="./../javascript/app.js"></script>
     <script src="./../javascript/create_user.js"></script>
     <script src="./../javascript/get_restaurant.js"></script>
+    <script src = "./../javascript/writeComment.js"></script>
   </body>
 
 </html>
