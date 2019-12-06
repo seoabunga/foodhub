@@ -75,3 +75,28 @@ function getMenu5() {
     )
   })
 }
+
+function createComment() {
+  var count = 0;
+  var title = "";
+  var comment = "";
+  db.collection("restaurants").doc("restaurant2")
+  .collection("comments").get().then(function(snap) {
+    snap.forEach(function(doc) {
+      title = doc.data().Title;
+      comment = doc.data().Comment;
+      count++;
+      console.log(count);
+      console.log(comment + "\n" + title);
+      createCommentCards(comment, title);
+    })
+
+  })
+}
+
+function createCommentCards(comment, title) {
+    $('.comments-container').append("<div class = 'comment-card'>"
+                                    + "<h3 id = 'comment" + title + "-title'>" + title + "</h3>"
+                                    + "<h3 id = 'comment" + comment + "'>" + comment + "</h3>"
+                                    + "</div>");
+}

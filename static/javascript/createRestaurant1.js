@@ -76,35 +76,31 @@ function getMenu5() {
   })
 }
 
-function createCommentCards() {
-    db.collection("restaurants").doc("restaurant1")
-    .collection("comments").get().then(snap=> {
-        size = snap.size;
-        // console.log(size);
-        for (var i = 1; i <= size; i++){
-            $('.comments-container').append("<div class = 'comment-card'>"
-                                            + "<h3 id = 'comment" + i + "-title'></h3>"
-                                            + "<h3 id = 'comment" + i + "'></h3>"
-                                            + "</div>");
-        }
-    });
+function createComment() {
+  var count = 0;
+  var title = "";
+  var comment = "";
+  db.collection("restaurants").doc("restaurant1")
+  .collection("comments").get().then(function(snap) {
+    snap.forEach(function(doc) {
+      title = doc.data().Title;
+      comment = doc.data().Comment;
+      count++;
+      console.log(count);
+      console.log(comment + "\n" + title);
+      createCommentCards(comment, title);
+    })
+
+  })
 }
 
-function createComment() {
+function createCommentCards(comment, title) {
+    $('.comments-container').append("<div class = 'comment-card'>"
+                                    + "<h3 id = 'comment" + title + "-title'>" + title + "</h3>"
+                                    + "<h3 id = 'comment" + comment + "'>" + comment + "</h3>"
+                                    + "</div>");
+}
 
-  db.collection("restaurants").doc("restaurant1").collection("comments").get().then(function(snap) {
-    size = snap.size;
-    var comm = db.collection("restaurants").doc("restaurant1").collection("comments");
-    for (var i = 0; i <= size; i++) {
-      comm.where("V", "==", i);
-      comm.get().then(function(snap) {
-        snap.forEach(function(doc) {
-          document.getElementById("comment" + i + "-title").text = doc.data().Title;
-          document.getElementById("comment" + i).text = doc.data().Comment;
-        })
-      })
-    }
-  })
 
   // var comm1 = db.collection("restaurants").doc("restaurant1").collection("comments")
   // .where("V", "==", 0);
@@ -145,6 +141,3 @@ function createComment() {
   //
   //   })
   // })
-
-
-}
