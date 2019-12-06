@@ -492,6 +492,132 @@ close.click(function() {
 });
 
 // Roulette FUNCTIONS
+//*******************
+//*******************
+
+// attempt 5
+function reRoll() {
+  var rollBTN = $("#rollBTN");
+  var randNum = Math.floor(5 * Math.random());
+  firebase.auth().onAuthStateChanged(function() {
+
+    var restaurants = db.collection("restaurants");
+    var randomRestaurant = restaurants.where("V", "==", randNum);
+
+    randomRestaurant.get().then(function(snap) {
+      snap.forEach(function(doc) {
+        // console.log(doc.data().Name);
+        var restName = doc.data().Name;
+        console.log(restName);
+
+        // To Go Sushi
+        if (restName == "To Go Sushi") {
+          randNum = Math.floor(5 * Math.random());
+          var menus = restaurants.doc("restaurant1").collection("menu");
+          var randomMenu = menus.where("V", "==", randNum);
+          // console.log(randomMenu);
+          randomMenu.get().then(function(snap) {
+            snap.forEach(function(doc) {
+              var menuName = doc.data().Name;
+              var priceValue = doc.data().Price;
+              $('#menu').text(menuName);
+              $('#price').text(priceValue);
+            })
+          })
+        }
+
+        // Dae-Ji Pork Cutlet House
+        else if (restName == "Dae-Ji Pork Cutlet House") {
+          randNum = Math.floor(6 * Math.random());
+          var menus = restaurants.doc("restaurant2").collection("menu");
+          var randomMenu = menus.where("V", "==", randNum);
+          // console.log(randomMenu);
+          randomMenu.get().then(function(snap) {
+            snap.forEach(function(doc) {
+              var menuName = doc.data().Name;
+              var priceValue = doc.data().Price;
+              $('#menu').text(menuName);
+              $('#price').text(priceValue);
+            })
+          })
+        }
+
+        // Jimoco Café and Pasta
+        else if (restName == "Jimoco Café and Pasta") {
+          randNum = Math.floor(5 * Math.random());
+          var menus = restaurants.doc("restaurant3").collection("menu");
+          var randomMenu = menus.where("V", "==", randNum);
+          // console.log(randomMenu);
+          randomMenu.get().then(function(snap) {
+            snap.forEach(function(doc) {
+              var menuName = doc.data().Name;
+              var priceValue = doc.data().Price;
+              $('#menu').text(menuName);
+              $('#price').text(priceValue);
+            })
+          })
+        }
+
+        // Bob's Burgers
+        else if (restName == "Bob's Burgers") {
+          randNum = Math.floor(5 * Math.random());
+          var menus = restaurants.doc("restaurant4").collection("menu");
+          var randomMenu = menus.where("V", "==", randNum);
+          // console.log(randomMenu);
+          randomMenu.get().then(function(snap) {
+            snap.forEach(function(doc) {
+              var menuName = doc.data().Name;
+              var priceValue = doc.data().Price;
+              $('#menu').text(menuName);
+              $('#price').text(priceValue);
+            })
+          })
+        }
+
+        // // Kimbab Cheonguk
+        // if (restName == "Bob's Burgers") {
+        //   randNum = Math.floor(5 * Math.random());
+        //   var menus = restaurants.doc("restaurant5").collection("menu");
+        //   var randomMenu = menus.where("V", "==", randNum);
+        //   // console.log(randomMenu);
+        //   randomMenu.get().then(function(snap) {
+        //     snap.forEach(function(doc) {
+        //       var menuName = doc.data().Name;
+        //       var priceValue = doc.data().Price;
+        //       $('#menu').text(menuName);
+        //       $('#price').text(priceValue);
+        //     })
+        //   })
+        // }
+
+        // Kimbab Cheonguk
+        else {
+          randNum = Math.floor(5 * Math.random());
+          var menus = restaurants.doc("restaurant5").collection("menu");
+          var randomMenu = menus.where("V", "==", randNum);
+          // console.log(randomMenu);
+          randomMenu.get().then(function(snap) {
+            snap.forEach(function(doc) {
+              var menuName = doc.data().Name;
+              var priceValue = doc.data().Price;
+              $('#menu').text(menuName);
+              $('#price').text(priceValue);
+            })
+          })
+        }
+
+
+
+        $('#restaurant').text(restName);
+
+
+      })
+    })
+  })
+}
+
+
+
 var $fastfood = ['In N Out', 'Mitsuwa', 'The Habit', 'Chipotle', 'Lil\' Pickle', 'Buffalo Wild Wings', 'Dominos', 'Haus of Pizza', 'Baja Fish', 'Chic Fil A', 'Flame Broiler', 'Jerry\'s Dogs', 'Jersey Mike\'s', 'Panera', 'Rooster Cafe', 'Corner Bakery', 'Laventinas', 'Bagelmania', 'Tommy\'s Pastrami', 'Costco'];
 
 var $fastRandom = Math.floor($fastfood.length * Math.random());
@@ -510,17 +636,19 @@ var $dessertRandom = Math.floor($dessert.length * Math.random());
 
 var $randomDest = $dessert[$dessertRandom];
 
-function reRoll(){
-
-    $('#fastfood').text($fastfood[Math.floor($fastfood.length * Math.random())]);
-
-    $('#restaurant').text($restaurant[Math.floor($restaurant.length * Math.random())]);
-
-    $('#dessert').text($dessert[Math.floor($dessert.length * Math.random())]);
-}
+// function reRoll(){
+//
+//     // $('#fastfood').text($fastfood[Math.floor($fastfood.length * Math.random())]);
+//
+//     $('#restaurant').text($restaurant[Math.floor($restaurant.length * Math.random())]);
+//
+//     $('#dessert').text($dessert[Math.floor($dessert.length * Math.random())]);
+// }
 
 $(document).ready(function(){
-    $('#fastfood').text($randomFast);
-    $('#restaurant').text($randomRest);
-    $('#dessert').text($randomDest);
+    // $('#fastfood').text($randomFast);
+    // $('#fastfood').text(restName);
+
+    // $('#restaurant').text($randomRest);
+    // $('#dessert').text($randomDest);
 });
