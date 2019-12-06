@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Leave a Review for Bob's Burgers!</title>
+    <link rel="stylesheet" href="./../css/restaurant-review_page.css">
+    <link rel="stylesheet" href="./../css/review-section.css">
+    <link rel="stylesheet" href="./../css/common-nav-style.css">
+    <link rel="stylesheet" href="./../css/menu_button_nav.css">
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <!-- Configuration connecting webfiles to firebase -->
+    <script src = "../javascript/firebase_config_foodhub.js"></script>
+
+  </head>
+
+  <body>
+    <ul id="menu-btn-menulist">
+      <li><img class="close" src="./../../image/close-white.png" /></li>
+      <li><a href="./main.html">Home</a></li>
+      <li><a href="./restaurant_list.html">Restaurant</a></li>
+    </ul>
+
+    <nav class="nav-bar-container">
+      <img id="menuBTN" class="menu-button" src="./../../image/menu.png" alt="">
+      <a href="./main.html">
+        <div class="title-logo-container">
+          <img src="" alt="">
+          <h3 class="header-title">FoodHub</h3>
+        </div>
+      </a>
+      <a href="#"><span id="login-button"></span></a>
+    </nav>
+
+    <div class="review-section-container">
+      <div class="review-section">
+        <div class="restaurant-info-container">
+          <h3 id="restaurant4-name"></h3>
+          <span id = "restaurant4-address"></span><br />
+          <span id = "restaurant4-phone-number"></span>
+        </div>
+
+        <form class="review-form" action="#" method="post">
+          <legend>Price Rating System</legend>
+          <fieldset class="noodle-field">
+            <ul>
+              <li>
+                <input id="ramen-input-1" type="radio" name="" value="">
+                <label class="ramen-label-1" for="ramen-input-1">
+                  <img id="ramen-img" class="ramen-1" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-2" type="radio" name="" value="">
+                <label class="ramen-label-2" for="ramen-input-2">
+                  <img id="ramen-img" class="ramen-2" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-3" type="radio" name="" value="">
+                <label class="ramen-label-3" for="ramen-input-3">
+                  <img id="ramen-img" class="ramen-3" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-4" type="radio" name="" value="">
+                <label class="ramen-label-4" for="ramen-input-4">
+                  <img id="ramen-img" class="ramen-4" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+              <li>
+                <input id="ramen-input-5" type="radio" name="" value="">
+                <label class="ramen-label-5" for="ramen-input-5">
+                  <img id="ramen-img" class="ramen-5" src="./../../image/ramen-empty.png" alt="">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+        <legend>Quality Rating System</legend>
+        <fieldset class="steak-field">
+          <ul>
+            <li>
+              <input id="steak-input-1" type="radio" name="" value="">
+              <label class="steak-label-1" for="steak-input-1">
+                <img id="steak-img" class="steak-1" src="./../../image/steak-empty.png" alt="">
+              </label>
+            </li>
+            <li>
+              <input id="steak-input-2" type="radio" name="" value="">
+              <label class="steak-label-2" for="steak-input-2">
+                <img id="steak-img" class="steak-2" src="./../../image/steak-empty.png" alt="">
+              </label>
+            </li>
+            <li>
+              <input id="steak-input-3" type="radio" name="" value="">
+              <label class="steak-label-3" for="steak-input-3">
+                <img id="steak-img" class="steak-3" src="./../../image/steak-empty.png" alt="">
+              </label>
+            </li>
+            <li>
+              <input id="steak-input-4" type="radio" name="" value="">
+              <label class="steak-label-4" for="steak-input-4">
+                <img id="steak-img" class="steak-4" src="./../../image/steak-empty.png" alt="">
+              </label>
+            </li>
+            <li>
+              <input id="steak-input-5" type="radio" name="" value="">
+              <label class="steak-label-5" for="steak-input-5">
+                <img id="steak-img" class="steak-5" src="./../../image/steak-empty.png" alt="">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <input type="text" name="subject" placeholder="Enter a title here." id = "title">
+        <textarea name="reviews" placeholder="Please share what you think about the restaurant!" rows="8"
+          cols="80" id = "comment"></textarea>
+        <p id = "submit">Submit</p>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./../javascript/app.js"></script>
+    <script src="./../javascript/create_user.js"></script>
+    <script src="./../javascript/createRestaurant4.js"></script>
+    <script src = "./../javascript/writeComment.js"></script>
+
+    <script>
+      createRestaurant4();
+      writeCommentR4();
+    </script>
+  </body>
+
+</html>

@@ -419,6 +419,7 @@ function logoutUser() {
   })
 } */
 
+// Displays a welcome message on main.html.
 function welcome() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("users").doc(user.uid).get().then(
@@ -429,6 +430,8 @@ function welcome() {
   })
 }
 
+// Displays Sign-in or Sign-out depending on whether the user
+// is signed in or not.
 function authentication() {
   firebase.auth().onAuthStateChanged(function(user){
     if (user){
