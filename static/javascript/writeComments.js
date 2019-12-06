@@ -8,7 +8,8 @@ function writeCommentR1() {
       db.collection("restaurants").doc("restaurant1")
       .collection("comments").add({
           Title: title,
-          Comment: content
+          Comment: content,
+          Timestamp: firebase.firestore.FieldValue.serverTimestamp()
       }).then(function(docRef){
           console.log("Document created with generated ID: "
           , docRef.id);
@@ -29,7 +30,8 @@ function writeCommentR2() {
       db.collection("restaurants").doc("restaurant2")
       .collection("comments").add({
           Title: title,
-          Comment: content
+          Comment: content,
+          Timestamp: firebase.firestore.FieldValue.serverTimestamp()
       }).then(function(docRef){
           console.log("Document created with generated ID: "
           , docRef.id);
@@ -50,7 +52,8 @@ function writeCommentR3() {
       db.collection("restaurants").doc("restaurant3")
       .collection("comments").add({
           Title: title,
-          Comment: content
+          Comment: content,
+          Timestamp: firebase.firestore.FieldValue.serverTimestamp()
       }).then(function(docRef){
           console.log("Document created with generated ID: "
           , docRef.id);
@@ -71,7 +74,8 @@ function writeCommentR3() {
         db.collection("restaurants").doc("restaurant4")
         .collection("comments").add({
             Title: title,
-            Comment: content
+            Comment: content,
+            Timestamp: firebase.firestore.FieldValue.serverTimestamp()
         }).then(function(docRef){
             console.log("Document created with generated ID: "
             , docRef.id);
@@ -93,7 +97,8 @@ function writeCommentR5() {
       db.collection("restaurants").doc("restaurant5")
       .collection("comments").add({
           Title: title,
-          Comment: content
+          Comment: content,
+          Timestamp: firebase.firestore.FieldValue.serverTimestamp()
       }).then(function(docRef){
           console.log("Document created with generated ID: "
           , docRef.id);
