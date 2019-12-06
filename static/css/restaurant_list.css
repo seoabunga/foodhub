@@ -30,6 +30,12 @@ body {
     overflow: auto;
 }
 
+.restaurant-card:hover {
+  transform: scale(1.3);
+  opacity: .7;
+  background-color: #d7bbed;
+}
+
 .restaurant-text {
     margin: 1.5em 0px;
     font-weight: bold;
@@ -74,6 +80,12 @@ body {
   height: 5%;
   float: right;
   clear: both;
+}
+
+#restaurantTXT {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 /* .restaurant-misc {
