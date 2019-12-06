@@ -14,23 +14,25 @@ body {
   margin: 0 auto;
   /* text-align: center; */
   /* background-image: url('./../../image/review-section-bg.jpg'); */
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; */
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5em;
+  /* padding: 5em; */
+  width: 90%;
 }
 
 .menu-item {
     background-color: RGBA(255, 255, 255, 0.8);
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     flex-basis: 100%;
     flex: 0 1 24%;
     height: 70%;
-    width: 40%;
+    width: 80%;
     margin: 0px auto 4em;
+    margin-top: 2em;
     border: 2px solid rgb(197, 201, 209);
     border-radius: 12px;
     box-shadow: rgb(0, 0, 0) 0px 0px 15px;
@@ -38,12 +40,12 @@ body {
     overflow: auto;
 }
 
-.row {
+/* .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-}
+} */
 
 .comment-card {
     background-color: RGBA(255, 255, 255, 0.8);
@@ -58,8 +60,8 @@ body {
 
 #leave-comment {
   position: absolute;
-  top: 150px;
-  right: 90px;
+  top: 140px;
+  right: 60px;
   transition: transform 1.6s;
 }
 
@@ -70,13 +72,11 @@ body {
 }
 
 #menuItem1 {
-    margin: 3px 1.5px 3px 1.5px;
-    width: 50%;
-    height: 50%;
-    clear: both;
+    margin: 0 auto;
+    width: 80%;
 }
 
-#menuItem2 {
+/* #menuItem2 {
     margin: 3px 1.5px 3px 1.5px;
     width: 50%;
     height: 50%;
@@ -109,4 +109,4 @@ body {
     width: 50%;
     height: 50%;
     clear: both;
-}
+} */
