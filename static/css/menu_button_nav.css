@@ -5,7 +5,7 @@
   /* top: 115px; */
   padding: 2em;
   border-top-right-radius: 15px;
-  background-color: #0A233E;
+  background-color: #FFF;
   text-align: center;
   font-weight: bold;
   font-size: 1.3em;
@@ -21,6 +21,16 @@
 #menu-btn-menulist li{
   display: list-item;
   margin: 1.3em 0;
+}
+
+#menu-btn-menulist li a{
+  color: #000;
+}
+
+#menu-btn-menulist li a:hover{
+  color: #1ed64f;
+  opacity: .8;
+  font-size: 1.2em;
 }
 
 .close {

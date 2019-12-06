@@ -34,6 +34,11 @@ a {
   padding: 1em;
 }
 
+#login-button:hover {
+  color: #a31b00;
+  transform: scale(1.2);
+}
+
 /* mobile design only */
 @media only screen and (min-width: 400px) and (max-width: 800px) {
 
