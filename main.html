@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset = "UTF-8"/>
+    <title>Main Page</title>
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/common-nav-style.css">
+    <link rel="stylesheet" href="./static/css/media_queries.css">
+    <link rel="stylesheet" href="./static/css/menu_button_nav.css">
+    <link rel="stylesheet" href="./static/css/roulette.css">
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <!-- Configuration connecting webfiles to firebase -->
+    <script src = "./static/javascript/firebase_config_foodhub.js"></script>
+
+  </head>
+
+  <body>
+    <ul id="menu-btn-menulist">
+      <li><img class="close" src="./image/close.png"/></li>
+      <li><a href="./main.html">Home</a></li>
+      <li><a href="./restaurant_list.html">Restaurant</a></li>
+    </ul>
+    <div class="main-container">
+      <header class="header-container">
+        <nav class="nav-bar-container">
+          <img id="menuBTN" class="menu-button" src="./image/menu.png" alt="">
+          <a href="./main.html">
+            <div class="title-logo-container">
+                <img src="" alt="">
+                <h3 class="header-title">FoodHub</h3>
+            </div>
+          </a>
+          <a href="#"><span id="login-button"></span></a>
+        </nav>
+        <div id = "welcome-container">Welcome <span id = "welcome-message"></span>!</div>
+      </header>
+    </div>
+
+    <div class="roulette-container">
+      <div class="title">
+        <div class="padding">
+          <h1>What Should We Eat?</h1>
+        </div>
+      </div>
+
+      <div class="response">
+        <div class="padding">
+          <h2>Restaurant:</h2>
+          <h2 id="restaurant"></h2>
+        </div>
+      </div>
+
+      <div class="quality">
+        <div class="padding">
+          <h2>Menu:</h2>
+          <h2 id="menu"></h2>
+        </div>
+      </div>
+
+      <div class="dessert">
+        <div class="padding">
+          <h2>Price:</h2>
+          <h2 id="price"></h2>
+        </div>
+      </div>
+
+      <div class="re-roll" onclick="reRoll()">
+      <!-- <div id="rollBTN" class="re-roll"> -->
+        <div class="padding">
+          <h2>Roll</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src = "./static/javascript/app.js"></script>
+    <script src = "./static/javascript/create_user.js"></script>
+
+    <!-- <script>
+      createUser();
+      showUserName();
+    </script> -->
+  </body>
+</html>

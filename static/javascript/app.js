@@ -9,7 +9,7 @@ var showRamen1 = false;
 ramenLabel1.click(function() {
   if (!showRamen1) {
     showRamen1 = true;
-    ramen1.attr("src", "./../../image/ramen-full.png");
+    ramen1.attr("src", "./image/ramen-full.png");
   }
 
   else if ((showRamen1) && !(showRamen2 || showRamen3 || showRamen4 || showRamen5)) {
@@ -18,11 +18,11 @@ ramenLabel1.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-empty.png");
-    ramen2.attr("src", "./../../image/ramen-empty.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-empty.png");
+    ramen2.attr("src", "./image/ramen-empty.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 
   else {
@@ -31,11 +31,11 @@ ramenLabel1.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-empty.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-empty.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 });
 
@@ -47,8 +47,8 @@ ramenLabel2.click(function() {
   if (!showRamen2) {
     showRamen1 = true;
     showRamen2 = true;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
   }
 
   else if ((showRamen1 && showRamen2) && !(showRamen3 || showRamen4 || showRamen5)) {
@@ -57,11 +57,11 @@ ramenLabel2.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-empty.png");
-    ramen2.attr("src", "./../../image/ramen-empty.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-empty.png");
+    ramen2.attr("src", "./image/ramen-empty.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 
   else {
@@ -70,11 +70,11 @@ ramenLabel2.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 });
 
@@ -87,9 +87,9 @@ ramenLabel3.click(function() {
     showRamen1 = true;
     showRamen2 = true;
     showRamen3 = true;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
-    ramen3.attr("src", "./../../image/ramen-full.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
+    ramen3.attr("src", "./image/ramen-full.png");
   }
 
   else if ((showRamen1 && showRamen2 && showRamen3) && !(showRamen4 || showRamen5)) {
@@ -98,11 +98,11 @@ ramenLabel3.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-empty.png");
-    ramen2.attr("src", "./../../image/ramen-empty.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-empty.png");
+    ramen2.attr("src", "./image/ramen-empty.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 
   else {
@@ -111,11 +111,11 @@ ramenLabel3.click(function() {
     showRamen3 = true;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
-    ramen3.attr("src", "./../../image/ramen-full.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
+    ramen3.attr("src", "./image/ramen-full.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 });
 
@@ -129,10 +129,10 @@ ramenLabel4.click(function() {
     showRamen2 = true;
     showRamen3 = true;
     showRamen4 = true;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
-    ramen3.attr("src", "./../../image/ramen-full.png");
-    ramen4.attr("src", "./../../image/ramen-full.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
+    ramen3.attr("src", "./image/ramen-full.png");
+    ramen4.attr("src", "./image/ramen-full.png");
   }
 
   else if ((showRamen1 && showRamen2 && showRamen3 && showRamen4) && !showRamen5) {
@@ -141,11 +141,11 @@ ramenLabel4.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-empty.png");
-    ramen2.attr("src", "./../../image/ramen-empty.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-empty.png");
+    ramen2.attr("src", "./image/ramen-empty.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 
   else {
@@ -154,11 +154,11 @@ ramenLabel4.click(function() {
     showRamen3 = true;
     showRamen4 = true;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
-    ramen3.attr("src", "./../../image/ramen-full.png");
-    ramen4.attr("src", "./../../image/ramen-full.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
+    ramen3.attr("src", "./image/ramen-full.png");
+    ramen4.attr("src", "./image/ramen-full.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 });
 
@@ -173,11 +173,11 @@ ramenLabel5.click(function() {
     showRamen3 = true;
     showRamen4 = true;
     showRamen5 = true;
-    ramen1.attr("src", "./../../image/ramen-full.png");
-    ramen2.attr("src", "./../../image/ramen-full.png");
-    ramen3.attr("src", "./../../image/ramen-full.png");
-    ramen4.attr("src", "./../../image/ramen-full.png");
-    ramen5.attr("src", "./../../image/ramen-full.png");
+    ramen1.attr("src", "./image/ramen-full.png");
+    ramen2.attr("src", "./image/ramen-full.png");
+    ramen3.attr("src", "./image/ramen-full.png");
+    ramen4.attr("src", "./image/ramen-full.png");
+    ramen5.attr("src", "./image/ramen-full.png");
   }
 
   else {
@@ -186,11 +186,11 @@ ramenLabel5.click(function() {
     showRamen3 = false;
     showRamen4 = false;
     showRamen5 = false;
-    ramen1.attr("src", "./../../image/ramen-empty.png");
-    ramen2.attr("src", "./../../image/ramen-empty.png");
-    ramen3.attr("src", "./../../image/ramen-empty.png");
-    ramen4.attr("src", "./../../image/ramen-empty.png");
-    ramen5.attr("src", "./../../image/ramen-empty.png");
+    ramen1.attr("src", "./image/ramen-empty.png");
+    ramen2.attr("src", "./image/ramen-empty.png");
+    ramen3.attr("src", "./image/ramen-empty.png");
+    ramen4.attr("src", "./image/ramen-empty.png");
+    ramen5.attr("src", "./image/ramen-empty.png");
   }
 });
 
@@ -206,7 +206,7 @@ var showSteak1 = false;
 steakLabel1.click(function() {
   if (!showSteak1) {
     showSteak1 = true;
-    steak1.attr("src", "./../../image/steak-full.png");
+    steak1.attr("src", "./image/steak-full.png");
   }
 
   else if ((showSteak1) && !(showSteak2 || showSteak3 || showSteak4 || showSteak5)) {
@@ -215,11 +215,11 @@ steakLabel1.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-empty.png");
-    steak2.attr("src", "./../../image/steak-empty.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-empty.png");
+    steak2.attr("src", "./image/steak-empty.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 
   else {
@@ -228,11 +228,11 @@ steakLabel1.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-empty.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-empty.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 });
 
@@ -244,8 +244,8 @@ steakLabel2.click(function() {
   if (!showSteak2) {
     showSteak1 = true;
     showSteak2 = true;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
   }
 
   else if ((showSteak1 && showSteak2) && !(showSteak3 || showSteak4 || showSteak5)) {
@@ -254,11 +254,11 @@ steakLabel2.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-empty.png");
-    steak2.attr("src", "./../../image/steak-empty.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-empty.png");
+    steak2.attr("src", "./image/steak-empty.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 
   else {
@@ -267,11 +267,11 @@ steakLabel2.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 });
 
@@ -284,9 +284,9 @@ steakLabel3.click(function() {
     showSteak1 = true;
     showSteak2 = true;
     showSteak3 = true;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
-    steak3.attr("src", "./../../image/steak-full.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
+    steak3.attr("src", "./image/steak-full.png");
   }
 
   else if ((showSteak1 && showSteak2 && showSteak3) && !(showSteak4 || showSteak5)) {
@@ -295,11 +295,11 @@ steakLabel3.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-empty.png");
-    steak2.attr("src", "./../../image/steak-empty.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-empty.png");
+    steak2.attr("src", "./image/steak-empty.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 
   else {
@@ -308,11 +308,11 @@ steakLabel3.click(function() {
     showSteak3 = true;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
-    steak3.attr("src", "./../../image/steak-full.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
+    steak3.attr("src", "./image/steak-full.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 });
 
@@ -326,10 +326,10 @@ steakLabel4.click(function() {
     showSteak2 = true;
     showSteak3 = true;
     showSteak4 = true;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
-    steak3.attr("src", "./../../image/steak-full.png");
-    steak4.attr("src", "./../../image/steak-full.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
+    steak3.attr("src", "./image/steak-full.png");
+    steak4.attr("src", "./image/steak-full.png");
   }
 
   else if ((showSteak1 && showSteak2 && showSteak3 && showSteak4) && !showSteak5) {
@@ -338,11 +338,11 @@ steakLabel4.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-empty.png");
-    steak2.attr("src", "./../../image/steak-empty.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-empty.png");
+    steak2.attr("src", "./image/steak-empty.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 
   else {
@@ -351,11 +351,11 @@ steakLabel4.click(function() {
     showSteak3 = true;
     showSteak4 = true;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
-    steak3.attr("src", "./../../image/steak-full.png");
-    steak4.attr("src", "./../../image/steak-full.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
+    steak3.attr("src", "./image/steak-full.png");
+    steak4.attr("src", "./image/steak-full.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 });
 
@@ -370,11 +370,11 @@ steakLabel5.click(function() {
     showSteak3 = true;
     showSteak4 = true;
     showSteak5 = true;
-    steak1.attr("src", "./../../image/steak-full.png");
-    steak2.attr("src", "./../../image/steak-full.png");
-    steak3.attr("src", "./../../image/steak-full.png");
-    steak4.attr("src", "./../../image/steak-full.png");
-    steak5.attr("src", "./../../image/steak-full.png");
+    steak1.attr("src", "./image/steak-full.png");
+    steak2.attr("src", "./image/steak-full.png");
+    steak3.attr("src", "./image/steak-full.png");
+    steak4.attr("src", "./image/steak-full.png");
+    steak5.attr("src", "./image/steak-full.png");
   }
 
   else {
@@ -383,11 +383,11 @@ steakLabel5.click(function() {
     showSteak3 = false;
     showSteak4 = false;
     showSteak5 = false;
-    steak1.attr("src", "./../../image/steak-empty.png");
-    steak2.attr("src", "./../../image/steak-empty.png");
-    steak3.attr("src", "./../../image/steak-empty.png");
-    steak4.attr("src", "./../../image/steak-empty.png");
-    steak5.attr("src", "./../../image/steak-empty.png");
+    steak1.attr("src", "./image/steak-empty.png");
+    steak2.attr("src", "./image/steak-empty.png");
+    steak3.attr("src", "./image/steak-empty.png");
+    steak4.attr("src", "./image/steak-empty.png");
+    steak5.attr("src", "./image/steak-empty.png");
   }
 });
 

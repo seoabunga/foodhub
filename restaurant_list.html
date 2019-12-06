@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restaurant List Page</title>
+  <link rel="stylesheet" href="./static/css/restaurant_list.css">
+  <link rel="stylesheet" href="./static/css/review-section.css">
+  <link rel="stylesheet" href="./static/css/common-nav-style.css">
+  <link rel="stylesheet" href="./static/css/menu_button_nav.css">
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+  <!-- Configuration connecting webfiles to firebase -->
+  <script src="./static/javascript/firebase_config_foodhub.js"></script>
+
+</head>
+
+<body>
+  <ul id="menu-btn-menulist">
+    <li><img class="close" src="./image/close.png" /></li>
+    <li><a href="./main.html">Home</a></li>
+    <li><a href="./restaurant_list.html">Restaurant</a></li>
+  </ul>
+
+  <nav class="nav-bar-container">
+    <img id="menuBTN" class="menu-button" src="./image/menu.png" alt="">
+    <a href="./main.html">
+      <div class="title-logo-container">
+        <img src="" alt="">
+        <h3 class="header-title">FoodHub</h3>
+      </div>
+    </a>
+    <a href="#"><span id="login-button"></span></a>
+  </nav>
+
+  <div class="restaurants-container">
+      <header>
+      <h2 id="restaurantTXT">Restaurants</h2>
+
+      <!-- Restaurant 1 -->
+      <a href = "./togo_sushi.html">
+        <div class="restaurant-card">
+          <div class="restaurant-title">
+            <img src = "./image/togo-sushi.jpg" alt = "togo sushi" id = "togo_sushi" />
+            <h3 id = "restaurant1-name"></h3>
+            <h3 id = "restaurant1-address"></h3>
+            <h3 id = "restaurant1-phone-number"></h3>
+            <h4 id = "restaurant1-motto"></h4>
+          </div>
+          <!-- <div class = "restaurant-misc">
+            <div class = "user-comment-info">
+              <img src="./image/user1.jpg" class = "user-profile"/>
+              <span id = "user-id">Justin Iverhoson</span>
+            </div>
+            <span class = "comment-date">yesterday</span>
+          </div> -->
+        </div>
+
+      <!-- Restaurant 2 -->
+      <a href = "./daeji.html">
+        <div class="restaurant-card">
+          <div class="restaurant-title">
+            <img src = "./image/daeji-metro.jpg" alt = "daeji metrotown" id = "daeji" />
+            <h3 id = "restaurant2-name"></h3>
+            <h3 id = "restaurant2-address"></h3>
+            <h3 id = "restaurant2-phone-number"></h3>
+            <h4 id = "restaurant2-motto"></h4>
+          </div>
+          <!-- <div class = "restaurant-misc">
+            <div class = "user-comment-info">
+              <img src="./image/user1.jpg" class = "user-profile"/>
+              <span id = "user-id">Justin Iverhoson</span>
+            </div>
+            <span class = "comment-date">yesterday</span>
+          </div> -->
+        </div>
+    </a>
+
+      <!-- Restaurant 3 -->
+      <a href = "./jimoco.html">
+        <div class="restaurant-card">
+          <div class="restaurant-title">
+            <img src = "./image/jimoco.jpg" alt = "jimoco" id = "jimoco" />
+            <h3 id = "restaurant3-name"></h3>
+            <h3 id = "restaurant3-address"></h3>
+            <h3 id = "restaurant3-phone-number"></h3>
+            <h4 id = "restaurant3-motto"></h4>
+          </div>
+      </a>
+
+        <!-- <div class = "restaurant-misc">
+          <div class = "user-comment-info">
+            <img src="./image/user1.jpg" class = "user-profile"/>
+            <span id = "user-id">Justin Iverhoson</span>
+          </div>
+          <span class = "comment-date">yesterday</span>
+        </div> -->
+      </div>
+
+      <!-- Restaurant 4 -->
+      <a href = "./bobs_burgers.html">
+        <div class="restaurant-card">
+          <div class="restaurant-title">
+            <img src = "./image/bobs_burgers.jpg" alt = "bobs burgers" id = "bb" />
+            <h3 id = "restaurant4-name"></h3>
+            <h3 id = "restaurant4-address"></h3>
+            <h3 id = "restaurant4-phone-number"></h3>
+            <h4 id = "restaurant4-motto"></h4>
+          </div>
+      </a>
+
+        <!-- <div class = "restaurant-misc">
+          <div class = "user-comment-info">
+            <img src="./image/user1.jpg" class = "user-profile"/>
+            <span id = "user-id">Justin Iverhoson</span>
+          </div>
+          <span class = "comment-date">yesterday</span>
+        </div> -->
+      </div>
+
+      <!-- Restaurant 5 -->
+      <a href = "./kimbab_cheonguk.html">
+        <div class="restaurant-card">
+          <div class="restaurant-title">
+            <img src = "./image/kimbabcheonguk.jpg" alt = "kimbabcheonguk" id = "kimbabcheonguk" />
+            <h3 id = "restaurant5-name"></h3>
+            <h3 id = "restaurant5-address"></h3>
+            <h3 id = "restaurant5-phone-number"></h3>
+            <h4 id = "restaurant5-motto"></h4>
+          </div>
+      </a>
+
+        <!-- <div class = "restaurant-misc">
+          <div class = "user-comment-info">
+            <img src="./image/user1.jpg" class = "user-profile"/>
+            <span id = "user-id">Justin Iverhoson</span>
+          </div>
+          <span class = "comment-date">yesterday</span>
+        </div> -->
+      </div>
+    </header>
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="./static/javascript/app.js"></script>
+  <script src="./static/javascript/get_restaurant.js"></script>
+</body>
+
+</html>
