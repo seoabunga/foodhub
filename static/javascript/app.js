@@ -452,7 +452,6 @@ function authentication() {
   })
 }
 
-authentication();
 welcome();
 // showUserName();
 
