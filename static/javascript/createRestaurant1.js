@@ -1,3 +1,4 @@
+/* Create a Restaurant title, address and phone number. */
 function createRestaurant1() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1").get().then(
@@ -11,6 +12,7 @@ function createRestaurant1() {
   })
 }
 
+/* Get Menu item 1 from database */
 function getMenu1() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1")
@@ -24,6 +26,7 @@ function getMenu1() {
   })
 }
 
+/* Get Menu item 2 from database */
 function getMenu2() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1")
@@ -37,6 +40,7 @@ function getMenu2() {
   })
 }
 
+/* Get menu item 3 from database */
 function getMenu3() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1")
@@ -50,6 +54,7 @@ function getMenu3() {
   })
 }
 
+/* Get menu item 4 from database */
 function getMenu4() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1")
@@ -63,6 +68,7 @@ function getMenu4() {
   })
 }
 
+/* Get menu item 5 from database */
 function getMenu5() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant1")
@@ -76,6 +82,8 @@ function getMenu5() {
   })
 }
 
+// Create a comment that gets posted into a comment card.
+// It converts the timestamp into mm/dd/yyyy
 function createComment() {
   var count = 0;
   var title = "";
@@ -99,7 +107,7 @@ function createComment() {
       function pad(n) {
           return n<10 ? '0'+n : n;
       }
-      // display date
+      // display date format
       var dateString = pad(month + 1) + "/" + pad(date) + "/" + year;
       console.log(dateString)
 
@@ -112,6 +120,7 @@ function createComment() {
   })
 }
 
+// Create comment cards that comment
 function createCommentCards(comment, title, dateString) {
     $('.comments-container').append("<div class = 'comment-card'>"
                                     + "<h3 id = 'comment" + title + "-title'>" + title + "</h3>"
@@ -119,44 +128,3 @@ function createCommentCards(comment, title, dateString) {
                                     + "<h3 id = 'timestamp'>" + dateString + "</h3>"
                                     + "</div>");
 }
-
-
-  // var comm1 = db.collection("restaurants").doc("restaurant1").collection("comments")
-  // .where("V", "==", 0);
-  // comm1.get().then(function(snap) {
-  //   snap.forEach(function(doc) {
-  //     document.getElementById("comment1-title").innerHTML = doc.data().Title;
-  //     document.getElementById("comment1").innerHTML = doc.data().Comment;
-  //
-  //   })
-  // })
-  //
-  // var comm2 = db.collection("restaurants").doc("restaurant1").collection("comments")
-  // .where("V", "==", 1);
-  // comm2.get().then(function(snap) {
-  //   snap.forEach(function(doc) {
-  //     document.getElementById("comment2-title").innerHTML = doc.data().Title;
-  //     document.getElementById("comment2").innerHTML = doc.data().Comment;
-  //
-  //   })
-  // })
-  //
-  // var comm3 = db.collection("restaurants").doc("restaurant1").collection("comments")
-  // .where("V", "==", 2);
-  // comm3.get().then(function(snap) {
-  //   snap.forEach(function(doc) {
-  //     document.getElementById("comment3-title").innerHTML = doc.data().Title;
-  //     document.getElementById("comment3").innerHTML = doc.data().Comment;
-  //
-  //   })
-  // })
-  //
-  // var comm4 = db.collection("restaurants").doc("restaurant1").collection("comments")
-  // .where("V", "==", 3);
-  // comm4.get().then(function(snap) {
-  //   snap.forEach(function(doc) {
-  //     document.getElementById("comment4-title").innerHTML = doc.data().Title;
-  //     document.getElementById("comment4").innerHTML = doc.data().Comment;
-  //
-  //   })
-  // })

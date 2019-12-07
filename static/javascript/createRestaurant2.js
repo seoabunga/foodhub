@@ -1,3 +1,5 @@
+// Create the name, location, and phone number
+// for daeji
 function createRestaurant2() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant2").get().then(
@@ -11,6 +13,7 @@ function createRestaurant2() {
   })
 }
 
+// Get menu item 1 from database
 function getMenu1() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant2")
@@ -24,6 +27,7 @@ function getMenu1() {
   })
 }
 
+// Get menu item 2 from database
 function getMenu2() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant2")
@@ -37,6 +41,7 @@ function getMenu2() {
   })
 }
 
+// Get menu item 3 from database
 function getMenu3() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant2")
@@ -50,6 +55,7 @@ function getMenu3() {
   })
 }
 
+// Get menu item 4 from database
 function getMenu4() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant2")
@@ -63,6 +69,7 @@ function getMenu4() {
   })
 }
 
+// Get menu item 5 from database
 function getMenu5() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant2")
@@ -76,6 +83,8 @@ function getMenu5() {
   })
 }
 
+// Create a comment that gets posted into a comment card.
+// It converts the timestamp into mm/dd/yyyy
 function createComment() {
   var count = 0;
   var title = "";
@@ -112,6 +121,7 @@ function createComment() {
   })
 }
 
+// Create comment cards that comment
 function createCommentCards(comment, title, dateString) {
     $('.comments-container').append("<div class = 'comment-card'>"
                                     + "<h3 id = 'comment" + title + "-title'>" + title + "</h3>"

@@ -1,4 +1,5 @@
 // function to create new document in users collection
+// based on comp1930 demo code.
 
 function createUser() {
   // if the current user is logged in
@@ -16,5 +17,4 @@ function createUser() {
       }, { merge: true });
   });
 }
-
 createUser();

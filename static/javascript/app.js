@@ -1,7 +1,4 @@
-// RAMEN FUNCTIONS *************
-//  ****************************
-// *****************************
-
+/* Functions for Ramen stickers */
 var ramen1 = $(".ramen-1");
 var ramenLabel1 = $(".ramen-label-1");
 var showRamen1 = false;
@@ -196,9 +193,7 @@ ramenLabel5.click(function() {
 
 
 
-// steak FUNCTIONS *************
-//  ****************************
-// *****************************
+/* Steak Quality Rating stickers */
 var steak1 = $(".steak-1");
 var steakLabel1 = $(".steak-label-1");
 var showSteak1 = false;
@@ -408,18 +403,7 @@ function logoutUser() {
   });
 }
 
-/* function showUserName(n){
-  firebase.auth().onAuthStateChanged(function (user){
-    db.collection("users").doc(user.uid).onSnapshot(function(d) {
-      console.log("Current Name: ", d.data());
-      var x = d.data().name;
-      console.log(x);
-      document.getElementById("test").innerHTML = x;
-    });
-  })
-} */
-
-// Displays a welcome message on main.html.
+// Displays a welcome message on main.html saying "welcome user".
 function welcome() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("users").doc(user.uid).get().then(
@@ -430,8 +414,8 @@ function welcome() {
   })
 }
 
-// Displays Sign-in or Sign-out depending on whether the user
-// is signed in or not.
+// Displays Sign-in or Sign-out in the nav bar
+// depending on whether the user is signed in or not.
 function authentication() {
   firebase.auth().onAuthStateChanged(function(user){
     if (user){
@@ -455,22 +439,7 @@ function authentication() {
 welcome();
 // showUserName();
 
-// var showStar = false;
-// for (var i = 1; i < 6; i++) {
-//   $(".star-label-" + i).click(function() {
-//     if (!showStar) {
-//       showStar = true;
-//       $(".star-" + i).attr("src", "./../../image/star_yellow.png");
-//     } else {
-//       showStar = false;
-//       $(".star-" + i).attr("src", "./../../image/star_gray.png");
-//     }
-//   });
-// }
-
-
-// Menu button nav function
-
+// Menu Button Nav Function
 var slideIn = {
   "left": "0px",
   "easing": "swing"
@@ -493,11 +462,7 @@ close.click(function() {
   menuList.animate(slideOut, 500);
 });
 
-// Roulette FUNCTIONS
-//*******************
-//*******************
-
-// attempt 5
+// Function for random roulette-ing an item
 function reRoll() {
   var rollBTN = $("#rollBTN");
   var randNum = Math.floor(5 * Math.random());
@@ -576,22 +541,6 @@ function reRoll() {
           })
         }
 
-        // // Kimbab Cheonguk
-        // if (restName == "Bob's Burgers") {
-        //   randNum = Math.floor(5 * Math.random());
-        //   var menus = restaurants.doc("restaurant5").collection("menu");
-        //   var randomMenu = menus.where("V", "==", randNum);
-        //   // console.log(randomMenu);
-        //   randomMenu.get().then(function(snap) {
-        //     snap.forEach(function(doc) {
-        //       var menuName = doc.data().Name;
-        //       var priceValue = doc.data().Price;
-        //       $('#menu').text(menuName);
-        //       $('#price').text(priceValue);
-        //     })
-        //   })
-        // }
-
         // Kimbab Cheonguk
         else {
           randNum = Math.floor(5 * Math.random());
@@ -608,10 +557,7 @@ function reRoll() {
           })
         }
 
-
-
         $('#restaurant').text(restName);
-
 
       })
     })
@@ -638,19 +584,6 @@ var $dessertRandom = Math.floor($dessert.length * Math.random());
 
 var $randomDest = $dessert[$dessertRandom];
 
-// function reRoll(){
-//
-//     // $('#fastfood').text($fastfood[Math.floor($fastfood.length * Math.random())]);
-//
-//     $('#restaurant').text($restaurant[Math.floor($restaurant.length * Math.random())]);
-//
-//     $('#dessert').text($dessert[Math.floor($dessert.length * Math.random())]);
-// }
 
 $(document).ready(function(){
-    // $('#fastfood').text($randomFast);
-    // $('#fastfood').text(restName);
-
-    // $('#restaurant').text($randomRest);
-    // $('#dessert').text($randomDest);
 });

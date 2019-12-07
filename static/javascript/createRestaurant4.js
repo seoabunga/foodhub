@@ -1,3 +1,5 @@
+// Create the name, location, and phone number for
+// Bob's Burgers
 function createRestaurant4() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant4").get().then(
@@ -11,6 +13,7 @@ function createRestaurant4() {
   })
 }
 
+// Get the 1st Menu item for Bob's Burgers
 function getMenu1() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant4")
@@ -24,6 +27,7 @@ function getMenu1() {
   })
 }
 
+// Get the 2nd Menu Item for Bob's Burgers
 function getMenu2() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant4")
@@ -37,6 +41,7 @@ function getMenu2() {
   })
 }
 
+// Get the 3rd menu item for Bob's Burgers
 function getMenu3() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant4")
@@ -50,6 +55,7 @@ function getMenu3() {
   })
 }
 
+// Get the 4th menu item for Bob's burgers
 function getMenu4() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant4")
@@ -63,6 +69,7 @@ function getMenu4() {
   })
 }
 
+// Get the 5th menu item for Bob's Burgers
 function getMenu5() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant4")
@@ -76,6 +83,8 @@ function getMenu5() {
   })
 }
 
+// Create a comment and posts the title, comment and date
+// in the comment card.
 function createComment() {
   var count = 0;
   var title = "";
@@ -112,6 +121,7 @@ function createComment() {
   })
 }
 
+// Create comment cards that comment
 function createCommentCards(comment, title, dateString) {
     $('.comments-container').append("<div class = 'comment-card'>"
                                     + "<h3 id = 'comment" + title + "-title'>" + title + "</h3>"

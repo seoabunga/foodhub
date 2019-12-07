@@ -1,3 +1,4 @@
+// Create the name, location, phone number of Jimoco
 function createRestaurant3() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant3").get().then(
@@ -11,6 +12,7 @@ function createRestaurant3() {
   })
 }
 
+// Get the 1st menu item for Jimoco
 function getMenu1() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant3")
@@ -24,6 +26,7 @@ function getMenu1() {
   })
 }
 
+// Get the 2nd menu item for Jimoco
 function getMenu2() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant3")
@@ -37,6 +40,7 @@ function getMenu2() {
   })
 }
 
+// Get the 3rd menu item from Jimoco
 function getMenu3() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant3")
@@ -50,6 +54,7 @@ function getMenu3() {
   })
 }
 
+// Get the 4th menu item for Jimoco
 function getMenu4() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant3")
@@ -63,6 +68,7 @@ function getMenu4() {
   })
 }
 
+// Get the 5th menu item for Jimoco
 function getMenu5() {
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("restaurants").doc("restaurant3")
@@ -76,6 +82,8 @@ function getMenu5() {
   })
 }
 
+// Create a comment and posts the title, comment and date
+// in the comment card. 
 function createComment() {
   var count = 0;
   var title = "";
@@ -112,6 +120,7 @@ function createComment() {
   })
 }
 
+// Create comment cards that comment
 function createCommentCards(comment, title, dateString) {
     $('.comments-container').append("<div class = 'comment-card'>"
                                     + "<h3 id = 'comment" + title + "-title'>" + title + "</h3>"

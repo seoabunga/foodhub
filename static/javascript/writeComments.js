@@ -1,3 +1,4 @@
+// Writes a comment to the database for restaurant 1
 function writeCommentR1() {
     $('#submit').click(function(){
       var title = document.getElementById("title").value;
@@ -20,6 +21,7 @@ function writeCommentR1() {
     })
 }
 
+// Writes a comment to the database for restaurant 2
 function writeCommentR2() {
     $('#submit').click(function(){
       var title = document.getElementById("title").value;
@@ -42,6 +44,7 @@ function writeCommentR2() {
     })
 }
 
+// Writes a comment to the database for restaurant 3
 function writeCommentR3() {
     $('#submit').click(function(){
       var title = document.getElementById("title").value;
@@ -64,6 +67,7 @@ function writeCommentR3() {
     })
   }
 
+  // Writes a comment to the database for restaurant 4
   function writeCommentR4() {
       $('#submit').click(function(){
         var title = document.getElementById("title").value;
@@ -87,6 +91,7 @@ function writeCommentR3() {
     )
 }
 
+// Writes a comment to the database for restaurant 5
 function writeCommentR5() {
     $('#submit').click(function(){
       var title = document.getElementById("title").value;
